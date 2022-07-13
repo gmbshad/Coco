@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns="http://www.w3.org/2001/XMLSchema">
+  <element name="manifest" type="manifestType"/>
+  <complexType name="uses-permissionType">
+    <simpleContent>
+      <extension base="string">
+        <attribute ref="and:name" xmlns:and="http://schemas.android.com/apk/res/android"/>
+      </extension>
+    </simpleContent>
+  </complexType>
+  <complexType name="uses-featureType">
+    <simpleContent>
+      <extension base="string">
+        <attribute ref="and:name" xmlns:and="http://schemas.android.com/apk/res/android"/>
+        <attribute ref="and:required" xmlns:and="http://schemas.android.com/apk/res/android"/>
+      </extension>
+    </simpleContent>
+  </complexType>
+  <complexType name="actionType">
+    <simpleContent>
+      <extension base="string">
+        <attribute ref="and:name" xmlns:and="http://schemas.android.com/apk/res/android"/>
+      </extension>
+    </simpleContent>
+  </complexType>
+  <complexType name="categoryType">
+    <simpleContent>
+      <extension base="string">
+        <attribute ref="and:name" xmlns:and="http://schemas.android.com/apk/res/android"/>
+      </extension>
+    </simpleContent>
+  </complexType>
+  <complexType name="intent-filterType">
+    <sequence>
+      <element type="actionType" name="action"/>
+      <element type="categoryType" name="category"/>
+    </sequence>
+  </complexType>
+  <complexType name="activityType" mixed="true">
+    <sequence>
+      <element type="intent-filterType" name="intent-filter" minOccurs="0">
+        <annotation>
+          <documentation> This allows the app to run when the car is moving. Use it carefully.
+            &lt;meta-data android:name="distractionOptimized" android:value="true" />
+            </documentation>
+        </annotation>
+      </element>
+    </sequence>
+    <attribute ref="and:name" xmlns:and="http://schemas.android.com/apk/res/android"/>
+  </complexType>
+  <complexType name="applicationType">
+    <sequence>
+      <element type="activityType" name="activity" maxOccurs="unbounded" minOccurs="0"/>
+    </sequence>
+    <attribute ref="and:icon" xmlns:and="http://schemas.android.com/apk/res/android"/>
+    <attribute ref="and:label" xmlns:and="http://schemas.android.com/apk/res/android"/>
+    <attribute ref="and:roundIcon" xmlns:and="http://schemas.android.com/apk/res/android"/>
+    <attribute ref="and:supportsRtl" xmlns:and="http://schemas.android.com/apk/res/android"/>
+    <attribute ref="and:theme" xmlns:and="http://schemas.android.com/apk/res/android"/>
+  </complexType>
+  <complexType name="manifestType">
+    <sequence>
+      <element type="uses-permissionType" name="uses-permission" maxOccurs="unbounded" minOccurs="0"/>
+      <element type="uses-featureType" name="uses-feature"/>
+      <element type="applicationType" name="application"/>
+    </sequence>
+    <attribute type="string" name="package"/>
+  </complexType>
+</schema>
