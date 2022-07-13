@@ -38,10 +38,10 @@ class FastScroller implements View.OnTouchListener {
 
     private float mTouchDownY = -1;
 
-    private View mScrollTrackView;
-    private View mScrollThumb;
-    private RecyclerView mRecyclerView;
-    private int mClickActionThreshold;
+    private final View mScrollTrackView;
+    private final View mScrollThumb;
+    private final RecyclerView mRecyclerView;
+    private final int mClickActionThreshold;
 
     FastScroller(@NonNull RecyclerView recyclerView, @NonNull View scrollTrackView,
             @NonNull View scrollView) {

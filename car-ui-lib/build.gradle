@@ -19,19 +19,21 @@
 apply plugin: 'com.android.library'
 
 android {
-    compileSdkVersion 30
+    compileSdk 32
 
     defaultConfig {
         minSdkVersion 28
-        targetSdkVersion 30
+        targetSdk 32
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        signingConfig signingConfigs.debug
+        multiDexEnabled true
     }
 
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
     }
 
     sourceSets {
@@ -49,32 +51,34 @@ android {
     // This is the gradle equivalent of the libs: ["android.car"] in the Android.bp
     // Which will be in the SDK 30 R3+
     useLibrary 'android.car'
+    ndkVersion '21.4.7075529'
 }
 
 dependencies {
-    api 'androidx.annotation:annotation:1.1.0'
-    api 'androidx.appcompat:appcompat:1.1.0'
-    api 'androidx.constraintlayout:constraintlayout:2.0.1'
-    api 'androidx.preference:preference:1.1.0'
-    api 'androidx.recyclerview:recyclerview:1.0.0'
-    api 'androidx.core:core:1.2.0'
+    api 'androidx.annotation:annotation:1.4.0'
+    api 'androidx.appcompat:appcompat:1.4.2'
+    api 'androidx.constraintlayout:constraintlayout:2.1.4'
+    api 'androidx.preference:preference:1.2.0'
+    api 'androidx.recyclerview:recyclerview:1.2.1'
+    api 'androidx.core:core:1.8.0'
     implementation 'com.android.support:support-annotations:28.0.0'
+    implementation 'androidx.asynclayoutinflater:asynclayoutinflater:1.0.0'
 
-    testImplementation "androidx.test.ext:junit:1.1.2"
-    testImplementation 'org.robolectric:robolectric:4.3.1'
-    testImplementation "org.mockito:mockito-core:2.19.0"
-    testImplementation "com.google.truth:truth:0.29"
-    testImplementation "org.testng:testng:6.9.9"
+    testImplementation 'androidx.test.ext:junit:1.1.3'
+    testImplementation 'org.robolectric:robolectric:4.8.1'
+    testImplementation 'org.mockito:mockito-core:4.6.1'
+    testImplementation 'com.google.truth:truth:1.1.3'
+    testImplementation 'org.testng:testng:7.6.1'
 
-    androidTestImplementation 'org.hamcrest:hamcrest-library:1.3'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
-    androidTestImplementation 'androidx.test.espresso:espresso-contrib:3.3.0'
-    androidTestImplementation "com.google.truth:truth:0.29"
-    androidTestImplementation "androidx.test.ext:junit:1.1.2"
-    androidTestImplementation "org.mockito:mockito-core:2.19.0"
-    androidTestImplementation 'androidx.test:runner:1.3.0'
-    androidTestImplementation 'androidx.test:rules:1.3.0'
+    androidTestImplementation 'org.hamcrest:hamcrest-library:2.2'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-contrib:3.4.0'
+    androidTestImplementation 'com.google.truth:truth:1.1.3'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.3'
+    androidTestImplementation 'org.mockito:mockito-core:4.6.1'
+    androidTestImplementation 'androidx.test:runner:1.4.0'
+    androidTestImplementation 'androidx.test:rules:1.4.0'
     // This is needed to be able to spy certain classes with Mockito
     // It's major/minor version must match Mockito's.
-    androidTestImplementation 'com.linkedin.dexmaker:dexmaker-mockito-inline:2.19.0'
+    androidTestImplementation 'com.linkedin.dexmaker:dexmaker-mockito-inline:2.28.3'
 }

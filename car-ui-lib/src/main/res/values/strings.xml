@@ -62,7 +62,6 @@ limitations under the License.
     <!-- that can register to Application.ActivityLifecycleCallbacks. -->
     <!-- Clients should override this value instead of changing the process name -->
     <!-- from manifest file. -->
-    <string name="car_ui_installer_process_name" translatable="false"></string>
 
     <!--
     List of packages allowed to hide the content area in wide screen mode when

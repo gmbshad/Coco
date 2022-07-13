@@ -68,18 +68,18 @@ public final class ToolbarControllerImpl implements ToolbarController {
     private static final String TAG = "CarUiToolbarController";
 
     @Nullable
-    private View mBackground;
-    private ImageView mNavIcon;
-    private ImageView mLogoInNavIconSpace;
-    private ViewGroup mNavIconContainer;
-    private ViewGroup mTitleContainer;
-    private TextView mTitle;
-    private TextView mSubtitle;
-    private ImageView mTitleLogo;
-    private ViewGroup mTitleLogoContainer;
-    private TabLayout mTabLayout;
-    private ViewGroup mMenuItemsContainer;
-    private FrameLayout mSearchViewContainer;
+    private final View mBackground;
+    private final ImageView mNavIcon;
+    private final ImageView mLogoInNavIconSpace;
+    private final ViewGroup mNavIconContainer;
+    private final ViewGroup mTitleContainer;
+    private final TextView mTitle;
+    private final TextView mSubtitle;
+    private final ImageView mTitleLogo;
+    private final ViewGroup mTitleLogoContainer;
+    private final TabLayout mTabLayout;
+    private final ViewGroup mMenuItemsContainer;
+    private final FrameLayout mSearchViewContainer;
     private SearchView mSearchView;
 
 
@@ -112,10 +112,10 @@ public final class ToolbarControllerImpl implements ToolbarController {
     private View[] mMenuItemViews;
     private int mMenuItemsXmlId = 0;
     private AlertDialog mOverflowDialog;
-    private boolean mNavIconSpaceReserved;
-    private boolean mLogoFillsNavIconSpace;
+    private final boolean mNavIconSpaceReserved;
+    private final boolean mLogoFillsNavIconSpace;
     private View mViewForContentAreaInWideScreenMode;
-    private boolean mShowLogo;
+    private final boolean mShowLogo;
     private List<? extends CarUiImeSearchListItem> mSearchItems;
     private final ProgressBarController mProgressBar;
     private final MenuItem.Listener mOverflowItemListener = item -> {

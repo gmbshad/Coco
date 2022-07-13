@@ -27,20 +27,11 @@
     <dimen name="car_ui_margin">112dp</dimen>
 
     <!-- Paddings -->
-    <dimen name="car_ui_padding_0">4dp</dimen>
-    <dimen name="car_ui_padding_1">8dp</dimen>
     <dimen name="car_ui_padding_2">16dp</dimen>
-    <dimen name="car_ui_padding_3">24dp</dimen>
-    <dimen name="car_ui_padding_4">32dp</dimen>
-    <dimen name="car_ui_padding_5">64dp</dimen>
-    <dimen name="car_ui_padding_6">96dp</dimen>
 
     <!-- Type Sizings -->
     <dimen name="car_ui_body1_size">32sp</dimen>
-    <dimen name="car_ui_body2_size">28sp</dimen>
     <dimen name="car_ui_body3_size">24sp</dimen>
-    <dimen name="car_ui_sub1_size">22sp</dimen>
-    <dimen name="car_ui_sub2_size">20sp</dimen>
     <dimen name="car_ui_sub3_size">18sp</dimen>
 
     <!-- Tabs -->
@@ -112,7 +103,6 @@
     <dimen name="car_ui_toolbar_search_close_icon_size">@dimen/car_ui_primary_icon_size</dimen>
 
     <!-- Internal artifacts. Do not overlay -->
-    <item name="wrap_content" format="integer" type="dimen">-2</item>
 
     <!-- CarUiRecyclerView -->
 
@@ -198,15 +188,6 @@
 
     <!-- List item actions  -->
 
-    <dimen name="car_ui_list_item_radio_button_height">@dimen/car_ui_list_item_height</dimen>
-    <dimen name="car_ui_list_item_radio_button_start_inset">@dimen/car_ui_list_item_start_inset</dimen>
-    <dimen name="car_ui_list_item_radio_button_end_inset">@dimen/car_ui_list_item_end_inset</dimen>
-    <dimen name="car_ui_list_item_radio_button_icon_container_width">@dimen/car_ui_list_item_icon_container_width</dimen>
-    <dimen name="car_ui_list_item_check_box_height">@dimen/car_ui_list_item_height</dimen>
-    <dimen name="car_ui_list_item_check_box_start_inset">@dimen/car_ui_list_item_start_inset</dimen>
-    <dimen name="car_ui_list_item_check_box_end_inset">@dimen/car_ui_list_item_end_inset</dimen>
-    <dimen name="car_ui_list_item_check_box_icon_container_width">@dimen/car_ui_list_item_icon_container_width</dimen>
-
     <!-- Rotary focus highlight  -->
 
     <dimen name="car_ui_rotary_focus_stroke_width">8dp</dimen>
@@ -239,12 +220,4 @@
     <dimen name="car_ui_ime_wide_screen_action_button_margin_left">36dp</dimen>
     <dimen name="car_ui_ime_wide_screen_action_button_height">88dp</dimen>
 
-    <dimen name="car_ui_ime_wide_search_item_icon_size">116dp</dimen>
-    <dimen name="car_ui_ime_wide_search_item_title_text_size">32dp</dimen>
-    <dimen name="car_ui_ime_wide_search_item_title_padding_left">24dp</dimen>
-    <dimen name="car_ui_ime_wide_search_item_title_padding_top">22dp</dimen>
-    <dimen name="car_ui_ime_wide_search_item_sub_title_padding_left">24dp</dimen>
-    <dimen name="car_ui_ime_wide_search_item_sub_title_padding_top">22dp</dimen>
-    <dimen name="car_ui_ime_wide_search_item_sub_title_text_size">24dp</dimen>
-    <dimen name="car_ui_ime_wide_search_item_secondary_image_padding_left">36dp</dimen>
 </resources>

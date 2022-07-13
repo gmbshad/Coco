@@ -41,7 +41,7 @@ public class SearchResultsProvider extends ContentProvider {
     public static final String SEARCH_RESULTS_PROVIDER = ".SearchResultsProvider";
 
     private Uri mContentUri;
-    private List<ContentValues> mSearchResults = new ArrayList<>();
+    private final List<ContentValues> mSearchResults = new ArrayList<>();
 
     /**
      * Database specific constant declarations

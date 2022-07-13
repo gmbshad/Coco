@@ -62,7 +62,7 @@ public class RangeFilterImpl implements RangeFilter {
                 + "mMaxItemsSecondHalf=" + mMaxItemsSecondHalf
                 + ", mUnlimitedCount=" + mUnlimitedCount
                 + ", mPivotIndex=" + mPivotIndex
-                + ", mRange=" + mRange.toString()
+                + ", mRange=" + mRange
                 + '}';
     }
 

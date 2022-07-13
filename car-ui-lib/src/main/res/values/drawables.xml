@@ -44,7 +44,6 @@
     <drawable name="car_ui_ime_wide_screen_background">#000</drawable>
 
     <!--  Background of the content area.  -->
-    <drawable name="car_ui_ime_wide_screen_content_area_background">#000</drawable>
 
     <!--  Background of the content area when there is no content.  -->
     <drawable name="car_ui_ime_wide_screen_no_content_background">#cc000000</drawable>

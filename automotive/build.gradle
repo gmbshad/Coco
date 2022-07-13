@@ -6,8 +6,15 @@ plugins {
 }
 
 android {
-    compileSdkVersion 30
-    buildToolsVersion "30.0.2"
+    signingConfigs {
+        debug {
+            storeFile file('/Users/mistaswisha/Developer/key')
+            storePassword 'yellaboy2'
+            keyAlias 'key0'
+            keyPassword 'yellaboy2'
+        }
+    }
+    compileSdk 32
 
     defaultConfig {
         applicationId "dz.islem.automotive"
@@ -18,16 +25,16 @@ android {
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
-
     buildTypes {
-        release {
-            minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        debug {
+            signingConfig signingConfigs.debug
+            multiDexEnabled true
         }
     }
+
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility "11"
+        targetCompatibility JavaVersion.VERSION_11
     }
     kotlinOptions {
         jvmTarget = '1.8'
@@ -40,31 +47,36 @@ android {
     // This is the gradle equivalent of the libs: ["android.car"] in the Android.bp
     // Which will be in the SDK 30 R3+
     useLibrary 'android.car'
+    dependenciesInfo {
+        includeInBundle true
+    }
+    ndkVersion '21.4.7075529'
 }
 
 dependencies {
 
     implementation project(':car-ui-lib')
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
-    implementation 'androidx.core:core-ktx:1.5.0'
-    implementation 'com.google.android.material:material:1.3.0'
+    implementation 'androidx.core:core-ktx:1.8.0'
+    implementation 'com.google.android.material:material:1.6.1'
     implementation 'com.github.jorgecastilloprz:fillableloaders:1.03@aar'
 
     implementation "androidx.asynclayoutinflater:asynclayoutinflater:1.0.0"
 
     implementation "com.github.capur16:digitspeedviewlib:1.0.3"
-    implementation 'com.github.anastr:speedviewlib:1.5.5'
+    implementation 'com.github.anastr:speedviewlib:1.6.0'
     implementation 'com.sdsmdg.harjot:croller:1.0.7'
     //view model
     implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'
-    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.2.0"
-    implementation "androidx.lifecycle:lifecycle-livedata-ktx:2.2.0"
-    implementation "androidx.lifecycle:lifecycle-runtime-ktx:2.2.0"
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.5.0'
+    implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.5.0'
+    implementation 'androidx.lifecycle:lifecycle-runtime-ktx:2.5.0'
     // rxAndroid
-    implementation 'io.reactivex.rxjava2:rxjava:2.1.9'
-    implementation 'io.reactivex.rxjava2:rxandroid:2.0.2'
+    implementation 'io.reactivex.rxjava2:rxjava:2.2.21'
+    implementation 'io.reactivex.rxjava2:rxandroid:2.1.1'
 
     testImplementation 'junit:junit:4.13.2'
-    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.3'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
+    debugImplementation files('../gradle/wrapper/gradle-wrapper.jar')
 }

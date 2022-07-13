@@ -111,7 +111,7 @@ public final class CarUiRecyclerView extends RecyclerView {
 
     private boolean mHasScrolled = false;
 
-    private OnScrollListener mOnScrollListener = new OnScrollListener() {
+    private final OnScrollListener mOnScrollListener = new OnScrollListener() {
         @Override
         public void onScrolled(@NonNull RecyclerView recyclerView, int dx, int dy) {
             if (dx > 0 || dy > 0) {

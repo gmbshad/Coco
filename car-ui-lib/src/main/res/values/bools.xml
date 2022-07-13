@@ -43,7 +43,6 @@
     <!-- Whether list, edit, dropdown and intent preferences should show a chevron or not -->
     <bool name="car_ui_preference_show_chevron">false</bool>
     <!-- whether list preference should be shown in full screen or as a dialog -->
-    <bool name="car_ui_preference_list_show_full_screen">true</bool>
 
     <!-- List items -->
 
@@ -73,5 +72,4 @@
 
     <!-- Whether IME is aligned left or not(which means its on right). This value will be used by
          the applications not using car-ui-lib components and are hiding the content area. -->
-    <bool name="car_ui_ime_wide_screen_aligned_left">true</bool>
 </resources>

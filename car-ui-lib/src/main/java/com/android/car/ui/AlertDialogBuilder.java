@@ -60,8 +60,8 @@ import com.android.car.ui.utils.CarUiUtils;
  */
 public class AlertDialogBuilder {
 
-    private AlertDialog.Builder mBuilder;
-    private Context mContext;
+    private final AlertDialog.Builder mBuilder;
+    private final Context mContext;
     private boolean mPositiveButtonSet;
     private boolean mNeutralButtonSet;
     private boolean mNegativeButtonSet;

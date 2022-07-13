@@ -58,7 +58,7 @@ class CheckCarUiComponents implements Application.ActivityLifecycleCallbacks {
     private View mRootView;
     private boolean mIsScreenVisible;
 
-    private Handler mHandler = new Handler();
+    private final Handler mHandler = new Handler();
 
     private final BroadcastReceiver mReceiver = new BroadcastReceiver() {
         @Override
@@ -259,12 +259,12 @@ class CheckCarUiComponents implements Application.ActivityLifecycleCallbacks {
             return;
         }
 
-        sb.append("viewNode= ").append(view.toString()).append(", ");
+        sb.append("viewNode= ").append(view).append(", ");
         sb.append("id= ").append(view.getId()).append(", ");
         sb.append("name= ").append(view.getAccessibilityClassName()).append(", ");
 
         sb.append('}');
-        System.out.println(sb.toString());
+        System.out.println(sb);
 
         indent += "  ";
         if (!(view instanceof ViewGroup)) {

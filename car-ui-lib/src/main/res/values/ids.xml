@@ -15,7 +15,6 @@
 -->
 <resources>
     <!-- Id used for the search button when using Toolbar.createSearch() method -->
-    <item name="search" type="id"/>
 
     <!-- WideScreen Keyboard IDs-->
     <item type="id" name="car_ui_wideScreenInputArea"/>

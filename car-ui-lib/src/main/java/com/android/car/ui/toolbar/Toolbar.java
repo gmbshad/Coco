@@ -124,7 +124,7 @@ public final class Toolbar extends FrameLayout implements ToolbarController {
         EDIT,
     }
 
-    private ToolbarControllerImpl mController;
+    private final ToolbarControllerImpl mController;
     private boolean mEatingTouch = false;
     private boolean mEatingHover = false;
 

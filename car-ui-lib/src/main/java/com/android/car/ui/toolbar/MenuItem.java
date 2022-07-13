@@ -66,7 +66,7 @@ public class MenuItem {
     private CharSequence mTitle;
     private Drawable mIcon;
     private OnClickListener mOnClickListener;
-    private DisplayBehavior mDisplayBehavior;
+    private final DisplayBehavior mDisplayBehavior;
     private int mUxRestrictions;
     private boolean mIsEnabled;
     private boolean mIsChecked;
